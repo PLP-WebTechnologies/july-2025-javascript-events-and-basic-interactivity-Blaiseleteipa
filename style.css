@@ -1,0 +1,175 @@
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 32px;
+}
+
+/* Light/Dark Mode Toggle */
+.toggle-btn {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background: #181a1b;
+    color: #f5f6fa;
+}
+
+body.dark-mode .container {
+    background: #23272f;
+}
+
+body.dark-mode .toggle-btn {
+    background: #f5f6fa;
+    color: #23272f;
+}
+
+/* Counter */
+.counter-section {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.counter-value {
+    font-size: 2.5rem;
+    margin: 12px 0;
+    display: block;
+}
+
+.counter-btn {
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    margin: 0 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.counter-btn:hover {
+    background: #005fa3;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin: 32px 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 14px 0;
+}
+
+.faq-question {
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding-right: 24px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    color: #444;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    margin-top: 8px;
+}
+
+/* Form Styles */
+form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 8px 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+input:focus {
+    border-color: #0078d4;
+    outline: none;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 0.95em;
+    margin-top: 2px;
+}
+
+.success-message {
+    color: #388e3c;
+    font-size: 1.05em;
+    margin-top: 8px;
+}
+
+button[type="submit"] {
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #005fa3;
+}
